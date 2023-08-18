@@ -1,0 +1,96 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "الحقوق";
+	Text = "هورنيت قبل من مطور سكربت";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 5;
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "الحقوق";
+	Text = "Hornet0:يوتيوب";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 5;
+
+local PhantomForcesWindow = Library:NewWindow("Hornet0بواسطه سكربت")
+
+local KillingCheats = PhantomForcesWindow:NewSection("شوتر او ارسنال لماب خاص")
+
+KillingCheats:CreateButton("الادمن سكربت", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+end)
+
+KillingCheats:CreateButton("Arceus Xهاك سكربت", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end)
+
+KillingCheats:CreateButton("دنيس حسين بوت ايم ", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hasan08122020108181818/HASA/main/scripthusenidanacronaldo.lua"))()
+end)
+
+KillingCheats:CreateButton("مابات لجميع الأماكن كشف", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/QA3xkxXY"))();
+end)
+
+KillingCheats:CreateButton("Arsenal جدران خلف من لاعبين رؤيه ", function()
+function getplrsname()
+for i,v in pairs(game:GetChildren()) do
+if v.ClassName == "Players" then
+return v.Name
+end
+end
+end
+local players = getplrsname()
+local plr = game[players].LocalPlayer
+coroutine.resume(coroutine.create(function()
+while wait(1) do
+coroutine.resume(coroutine.create(function()
+for _,v in pairs(game[players]:GetPlayers()) do
+if v.Name ~= plr.Name and v.Character then
+v.Character.HeadHB.CanCollide = false
+v.Character.HeadHB.Transparency = 10
+v.Character.HeadHB.Size = Vector3.new(100,100,100)
+v.Character.HumanoidRootPart.CanCollide = false
+v.Character.HumanoidRootPart.Transparency = 10
+v.Character.HumanoidRootPart.Size = Vector3.new(100,100,100)
+end
+end
+end))
+end
+end))
+function CreateSG(name,parent,face)
+local SurfaceGui = Instance.new("SurfaceGui",parent)
+SurfaceGui.Parent = parent
+SurfaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+SurfaceGui.Face = Enum.NormalId[face]
+SurfaceGui.LightInfluence = 0
+SurfaceGui.ResetOnSpawn = false
+SurfaceGui.Name = name
+SurfaceGui.AlwaysOnTop = true
+local Frame = Instance.new("Frame",SurfaceGui)
+Frame.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Frame.Size = UDim2.new(1,0,1,0)
+end
+while wait(1) do
+for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+if v ~= game:GetService("Players").LocalPlayer and v.Character ~= nil and
+v.Character:FindFirstChild("LowerTorso") and v.Character.LowerTorso:FindFirstChild("cham") == nil then
+for i,v in pairs (v.Character:GetChildren()) do
+if v:IsA("MeshPart") or v.Name == "LowerTorso" then
+CreateSG("cham",v,"Back")
+CreateSG("cham",v,"Front")
+CreateSG("cham",v,"Left")
+CreateSG("cham",v,"Right")
+CreateSG("cham",v,"Right")
+CreateSG("cham",v,"Top")
+CreateSG("cham",v,"Bottom")
+end
+end
+end
+end
+end
+end)
+
+KillingCheats:CreateDropdown("o", {"هورنيت سكربت مطور", "oالحقوق", "Hornet0:يوتيوب"}, 2, function(text)
+print(text)
+end)
